@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My recipie website</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Char Char Recipies</div>
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Search recipes...">
+                <button id="searchButton">Search</button>
+            </div>
+            <div class="filter-container">
+                <select id="cuisineFilter">
+                    <option value="">All Cuisines</option>
+                    <option value="italian">Italian</option>
+                    <option value="mexican">Mexican</option>
+                    <option value="indian">Indian</option>
+                    <option value="chinese">Chinese</option>
+                </select>
+                <select id="dietFilter">
+                    <option value="">All Diets</option>
+                    <option value="vegetarian">Vegetarian</option>
+                    <option value="vegan">Vegan</option>
+                    <option value="gluten-free">Gluten Free</option>
+                </select>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Discover Amazing Recipes</h1>
+                <p>Find your next culinary adventure from thousands of recipes</p>
+            </div>
+        </section>
+
+        <section class="recipes">
+            <div id="loading" class="loading hidden">Loading recipes...</div>
+            <div id="recipeGrid" class="recipe-grid"></div>
+            <div class="pagination">
+                <button id="loadMore" class="load-more hidden">Load More Recipes</button>
+            </div>
+        </section>
+    </main>
+
+    <div id="recipeModal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div id="modalContent"></div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Char Char Recipes. Powered by Spoonacular API</p>
+    </footer>
+
+    <script src="js/config.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
